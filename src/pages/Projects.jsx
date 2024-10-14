@@ -35,7 +35,7 @@ function Projects() {
 			<div className="md:flex font-roboto">
 				<ProjectCard
 					name={"SlugAid"}
-					link={"https://Google.com"}
+					link={"https://github.com/dgonz10152/ACMHacks-2024"}
 					tags={["React", "Firebase", "Google-Maps-Api", "Next.js", "Material UI"]}
 				>
 					There are many on campus basic needs facilities here at UCSC, but

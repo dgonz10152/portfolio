@@ -34,7 +34,7 @@ function Projects() {
 			</b>
 			<div className="md:flex font-roboto">
 				<ProjectCard
-					name={"SlugAid"}
+					name={"SlugAid: ACM Hacks Best Impact Winner"}
 					link={"https://github.com/dgonz10152/ACMHacks-2024"}
 					tags={["React", "Firebase", "Google-Maps-Api", "Next.js", "Material UI"]}
 				>

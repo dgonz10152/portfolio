@@ -49,11 +49,15 @@ function Projects() {
 						"Material UI",
 					]}
 				>
-					There are many on campus basic needs facilities here at UCSC, but
-					unfortunately many of them are underutilized. People are confused as to
-					what these facilities are, where they are, and what they have to offer.
-					That ends today. This is an app that will allow these facilities to post
-					the products that they offer, and a map leading people to easily find them.
+					At UCSC, there are numerous on-campus basic needs facilities, but many
+					remain underutilized due to confusion about what they offer and where
+					they’re located. This app is here to change that. It provides a platform
+					for these facilities to post their available products, along with an
+					interactive map to help users easily find them. Additionally, the app
+					leverages AI-powered image recognition to automatically identify and
+					catalog the inventory in these facilities, making it easier for staff to
+					itemize their offerings and for students to access up-to-date information
+					about available resources.
 				</ProjectCard>
 				<ProjectCard
 					name={"T4SG Engangered Animal Tracker"}

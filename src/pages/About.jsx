@@ -11,7 +11,7 @@ function About() {
 								<b>Daniel Gonzalez</b>
 							</h1>
 							<h2 className="left-0 px-[5.25rem] py-2 text-2xl text-slate-100">
-								Full Stack Developer
+								Software Developer
 							</h2>
 						</div>
 					</div>
@@ -21,9 +21,9 @@ function About() {
 							developer since the age of 7. It all started when I took a Khan Academy
 							course on javascript and instantly fell in love with development. Since
 							then I&apos;ve tried my hand at many different areas from game
-							development, to machine learning. Currently my main focus is web
-							development as I love to create something that I can share with the whole
-							world!
+							development, to machine learning, to web development. Currently my main
+							focus is web development as I love to create web solutions that can
+							impact the lives of many!
 						</p>
 					</div>
 				</div>

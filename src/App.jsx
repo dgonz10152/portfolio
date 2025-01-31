@@ -13,8 +13,6 @@ function App() {
 				<hr className="p-0 m-10 w-[95vw] h-1 mx-auto my-20 border-0 rounded bg-slate-700" />
 				<div id="Experience" />
 				<Experience />
-				<div className="m-10" />
-
 				<div id="Projects" />
 				<Projects />
 			</div>

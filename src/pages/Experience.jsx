@@ -1,13 +1,13 @@
 function ExperienceCard({ name, children, years }) {
 	return (
-		<div className="rounded-md p-10 m-4 bg-slate-900  duration-150 w-full md:w-[40%] flex-grow">
+		<div className="rounded-md p-10 m-4 bg-neutral-900/20 backdrop-blur-sm  duration-150 w-full md:w-[40%] flex-grow">
 			<b>
-				<h1 className="text-xl text-slate-200 m-1">{name}</h1>
-				<h2 className="text-lg text-slate-400 m-1">{years}</h2>
+				<h1 className="text-xl text-neutral-200 m-1">{name}</h1>
+				<h2 className="text-lg text-neutral-400 m-1">{years}</h2>
 			</b>
 			<hr className="my-2 w-1/3" />
 			<div className="flex">
-				<p className="text-xl text-slate-300">{children}</p>
+				<p className="text-xl text-neutral-300">{children}</p>
 			</div>
 		</div>
 	);
@@ -17,7 +17,7 @@ export default function Experience() {
 	return (
 		<div className="py-10">
 			<b>
-				<h1 className="text-slate-200 text-3xl p-5">Experience</h1>
+				<h1 className="text-neutral-200 text-3xl p-5">Experience</h1>
 			</b>
 			<div className="flex text-roboto w-full flex-wrap">
 				<ExperienceCard name={"First Robotics Competition"} years={"2023-24"}>

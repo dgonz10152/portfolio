@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 :root {
-	background-image: linear-gradient(45deg, #0f172a, #1e1b4b);
+	background-image: linear-gradient(to right, #151526 0%, #0b0b10 100%);
 	font: roboto;
 }

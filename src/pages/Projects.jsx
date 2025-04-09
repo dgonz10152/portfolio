@@ -91,6 +91,7 @@ function Projects() {
 				<ProjectCard
 					name={"Jordan"}
 					tags={["React", "TypeScript", "Next.js", "Vapi", "Supabase", "SQL"]}
+					link={"https://jordanhired.com"}
 				>
 					Many employees struggle to find the right marketing company due to a lack
 					of personalized guidance. This website aims to change that. It provides a

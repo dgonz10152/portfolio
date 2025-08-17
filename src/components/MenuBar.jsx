@@ -17,7 +17,7 @@ function MenuItem({ elementId, children }) {
 function MenuBar() {
 	return (
 		<>
-			<div className="sticky top-0 z-20 h-14 backdrop-blur-sm">
+			<div className="sticky top-0 z-40 h-14 backdrop-blur-sm">
 				<div className="flex justify-evenly">
 					<div className="flex justify-evenly">
 						<MenuItem elementId={"About"}>About</MenuItem>

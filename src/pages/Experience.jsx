@@ -1,6 +1,6 @@
 function ExperienceCard({ name, children, years, position = "Developer" }) {
 	return (
-		<div className="rounded-md p-10 bg-neutral-900/20 hover:bg-slate-700/20 backdrop-blur-sm duration-300 transition-[background-color] ease-[cubic-bezier(0.77,0,0.175,1)]">
+		<div className="rounded-md p-10 bg-neutral-900/20 hover:bg-neutral-700/20 backdrop-blur-md duration-300 transition-[background-color] ease-[cubic-bezier(0.77,0,0.175,1)]">
 			<b>
 				<div className="flex justify-between">
 					<h1 className="text-xl text-neutral-200 m-1 w-1/2">{name}</h1>
@@ -19,7 +19,7 @@ function ExperienceCard({ name, children, years, position = "Developer" }) {
 
 export default function Experience() {
 	return (
-		<div className="py-10">
+		<div className="py-10 relative z-20">
 			<b>
 				<h1 className="text-neutral-200 text-3xl p-5">Experience</h1>
 			</b>

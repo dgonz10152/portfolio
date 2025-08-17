@@ -8,11 +8,12 @@ function App() {
 	return (
 		<>
 			<Spinny />
-			<div className="overflow-x-clip z-20 bg-slate-900">
+
+			<div className="relative bg-slate-950">
 				<div id="About" />
 				<MenuBar />
 				<About />
-				<hr className="p-0 m-10 w-[95vw] h-1 mx-auto my-20 border-0 rounded bg-slate-700" />
+				<hr className="p-0 m-10 w-[95vw] h-1 mx-auto my-20 border-0 rounded bg-neutral-700" />
 				<div id="Experience" />
 				<Experience />
 				<div id="Projects" />

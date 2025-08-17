@@ -61,7 +61,7 @@ function ProjectCard({ name, link, tags, children }) {
 
 function Projects() {
 	return (
-		<div className="py-10">
+		<div className="py-10 relative z-20">
 			<b>
 				<h1 className="text-neutral-200 text-3xl p-5">Projects</h1>
 			</b>

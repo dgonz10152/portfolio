@@ -26,7 +26,7 @@ function SpinningIcosphere() {
 				// Only activate when the top of the screen is past the bottom of About section
 				if (screenTop > aboutBottom) {
 					// Calculate fade-in progress (0 to 1)
-					const fadeDistance = 200; // pixels over which to fade in
+					const fadeDistance = 1000; // pixels over which to fade in
 					const fadeProgress = Math.min((screenTop - aboutBottom) / fadeDistance, 1);
 					setOpacity(fadeProgress);
 

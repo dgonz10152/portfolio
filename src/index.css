@@ -1,8 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-	background-image: linear-gradient(to right, #151526 0%, #0b0b10 100%);
-	font: roboto;
-}

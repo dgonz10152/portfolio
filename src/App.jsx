@@ -2,11 +2,13 @@ import MenuBar from "./components/MenuBar";
 import About from "./pages/About";
 import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
+import Spinny from "./components/Spinny";
 
 function App() {
 	return (
 		<>
-			<div className="overflow-x-clip z-20 ">
+			<Spinny />
+			<div className="overflow-x-clip z-20 bg-slate-900">
 				<div id="About" />
 				<MenuBar />
 				<About />

@@ -7,7 +7,7 @@ function MenuItem({ elementId, children }) {
 	return (
 		<button
 			onClick={scrollTo}
-			className="m-0 p-2 px-10 text-xl text-slate-100 hover:text-2xl hover:text-indigo-900 duration-200 font-roboto blur-none"
+			className="m-0 p-2 px-3 md:px-10 text-xl text-slate-100 hover:text-2xl hover:text-indigo-900 duration-200 font-roboto blur-none"
 		>
 			{children}
 		</button>

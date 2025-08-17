@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Links() {
 	return (
 		<>
-			<h1 className="text-xl text-neutral-400 m-1 left-0 px-[5rem] flex-row">
+			<h1 className="text-xl text-neutral-400 m-1 left-0 px-2 md:px-[5rem] flex-row">
 				<a
 					href="https://github.com/dgonz10152"
 					target="_blank"

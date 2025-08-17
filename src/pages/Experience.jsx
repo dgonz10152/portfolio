@@ -3,15 +3,15 @@ function ExperienceCard({ name, children, years, position = "Developer" }) {
 		<div className="rounded-md p-10 bg-neutral-900/20 hover:bg-neutral-700/20 backdrop-blur-md duration-300 transition-[background-color] ease-[cubic-bezier(0.77,0,0.175,1)]">
 			<b>
 				<div className="flex justify-between">
-					<h1 className="text-xl text-neutral-200 m-1 w-1/2">{name}</h1>
-					<h1 className="text-xl text-neutral-400 m-1">{position}</h1>
+					<h1 className="text-lg md:text-xl text-neutral-200 m-1 w-1/2">{name}</h1>
+					<h1 className="text-lg md:text-xl text-neutral-400 m-1">{position}</h1>
 				</div>
 
-				<h2 className="text-lg text-neutral-400 m-1">{years}</h2>
+				<h2 className="text-md md:text-lg text-neutral-400 m-1">{years}</h2>
 			</b>
 			<hr className="my-2 w-1/3" />
 			<div className="flex">
-				<p className="text-xl text-neutral-300">{children}</p>
+				<p className="text-lg md:text-xl text-neutral-300">{children}</p>
 			</div>
 		</div>
 	);

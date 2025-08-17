@@ -3,7 +3,7 @@ import { useState } from "react";
 function ProjectCard({ name, link, tags, children }) {
 	const tagItems = tags.map((tag) => (
 		<div key={tag}>
-			<li className="m-1 p-1 bg-indigo-400 rounded-sm">
+			<li className="flex m-1 px-1 bg-indigo-400 rounded-sm h-full items-center">
 				<p className="text-neutral-900 text-xs">{tag}</p>
 			</li>
 		</div>
@@ -34,7 +34,7 @@ function ProjectCard({ name, link, tags, children }) {
 		>
 			<div>
 				<b>
-					<h1 className="text-xl text-neutral-200 m-1">{name}</h1>
+					<h1 className="text-lg md:text-xl text-neutral-200 m-1">{name}</h1>
 				</b>
 				<ul className="flex">{tagItems}</ul>
 				<hr className="my-2" />

@@ -1,6 +1,10 @@
 import { useState } from "react";
+import fireOracleImg from "../assets/images/fireOracle.png";
+import pantryPalImg from "../assets/images/pantryPal.png";
+import jordanImg from "../assets/images/jordan.png";
+import formulaSlugImg from "../assets/images/formulaSlug.png";
 
-function ProjectCard({ name, link, tags, children }) {
+function ProjectCard({ name, link, tags, children, imageUrl }) {
 	const tagItems = tags.map((tag) => (
 		<div key={tag}>
 			<li className="flex m-1 px-1 bg-indigo-400 rounded-sm h-full items-center">
@@ -38,6 +42,11 @@ function ProjectCard({ name, link, tags, children }) {
 				</b>
 				<ul className="flex">{tagItems}</ul>
 				<hr className="my-2" />
+				{imageUrl && (
+					<div className="mb-3">
+						<img src={imageUrl} alt={name} className="w-full rounded-md" />
+					</div>
+				)}
 				<div className="flex">
 					<p className="text-neutral-300 p-1">{children}</p>
 				</div>
@@ -67,7 +76,7 @@ function Projects() {
 			</b>
 			<div className="md:flex flex-wrap font-roboto">
 				<ProjectCard
-					name={"SlugAid: ACM Hacks Best Impact Winner"}
+					name={"Pantry Pal: ACM Hacks Best Impact Winner"}
 					link={"https://github.com/dgonz10152/slug-aid"}
 					tags={[
 						"React",
@@ -77,6 +86,7 @@ function Projects() {
 						"Next.js",
 						"Material UI",
 					]}
+					imageUrl={pantryPalImg}
 				>
 					At UCSC, there are numerous on-campus basic needs facilities, but many
 					remain underutilized due to confusion about what they offer and where
@@ -88,23 +98,8 @@ function Projects() {
 					itemize their offerings and for students to access up-to-date information
 					about available resources.
 				</ProjectCard>
-				<ProjectCard
-					name={"Jordan"}
-					tags={["React", "TypeScript", "Next.js", "Vapi", "Supabase", "SQL"]}
-					link={"https://jordanhired.com"}
-				>
-					Many employees struggle to find the right marketing company due to a lack
-					of personalized guidance. This website aims to change that. It provides a
-					platform where users can interview with an AI that evaluates their skills,
-					experience, and career goals. Based on the interview, the AI intelligently
-					matches them with marketing companies that align with their strengths and
-					aspirations. Users can access detailed company profiles, explore potential
-					career paths, and receive tailored recommendations. Built with React,
-					TypeScript, and Next.js, and powered by Vapi for AI-driven conversations,
-					the platform utilizes Supabase and SQL to ensure secure data management and
-					a seamless user experience.
-				</ProjectCard>
-				<ProjectCard
+
+				{/* <ProjectCard
 					name={"T4SG Engangered Animal Tracker"}
 					link={"https://github.com/dgonz10152/t4sg-round2"}
 					tags={["React", "Next.js", "Supabase", "Shadcn"]}
@@ -117,11 +112,29 @@ function Projects() {
 					other species data. The platform also features interactive maps that show
 					where these animals are found, helping researchers and conservationists
 					track populations.
+				</ProjectCard> */}
+				<ProjectCard
+					name={"Fire Oracle: UN Reboot the Earth Challenge Runner Up"}
+					link={"https://github.com/dgonz10152/reboot-the-earth"}
+					tags={["React", "Next.js", "Flask", "Scikit-Learn"]}
+					imageUrl={fireOracleImg}
+				>
+					Fire Oracle is a decision-support web application designed to help
+					firefighters prioritize geographic areas for prescribed burns using
+					data-driven risk and feasibility analysis. The platform leverages a
+					custom-trained AI model built on historical wildfire data and integrates
+					live weather and environmental inputs to generate dynamic fire risk and
+					burn feasibility scores. These insights are presented through an
+					interactive, map-based interface built in React, with real-time data served
+					from a Flask backend, enabling clear visualization of prioritization
+					results and supporting informed, operational decision-making in wildfire
+					management.
 				</ProjectCard>
 				<ProjectCard
 					name={"Formula Slug Live Telemetry Visualization"}
 					link={"https://github.com/formulaslug/telemetry-vis-software"}
 					tags={["React", "Python", "TypeScript", "Next.js", "Apache Arrow"]}
+					imageUrl={formulaSlugImg}
 				>
 					Modern motorsport demands real-time data analysis to optimize performance
 					and strategy. This project delivers a seamless data streaming solution for
@@ -132,6 +145,23 @@ function Projects() {
 					With the over 100 Formula Slug team members, this platform empowers
 					engineers, drivers, and analysts to make data-driven decisions faster,
 					enhancing both vehicle performance and race strategy.
+				</ProjectCard>
+				<ProjectCard
+					name={"Jordan"}
+					tags={["React", "TypeScript", "Next.js", "Vapi", "Supabase", "SQL"]}
+					link={"https://jordanhired.com"}
+					imageUrl={jordanImg}
+				>
+					Many employees struggle to find the right marketing company due to a lack
+					of personalized guidance. This website aims to change that. It provides a
+					platform where users can interview with an AI that evaluates their skills,
+					experience, and career goals. Based on the interview, the AI intelligently
+					matches them with marketing companies that align with their strengths and
+					aspirations. Users can access detailed company profiles, explore potential
+					career paths, and receive tailored recommendations. Built with React,
+					TypeScript, and Next.js, and powered by Vapi for AI-driven conversations,
+					the platform utilizes Supabase and SQL to ensure secure data management and
+					a seamless user experience.
 				</ProjectCard>
 			</div>
 		</div>

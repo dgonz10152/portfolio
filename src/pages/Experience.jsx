@@ -24,19 +24,23 @@ export default function Experience() {
 				<h1 className="text-neutral-200 text-3xl p-5">Experience</h1>
 			</b>
 			<div className="grid text-roboto w-full grid-cols-1 md:grid-cols-2 gap-4 p-5">
-				{/* <ExperienceCard
-					name={"First Robotics Competition"}
-					years={"2023-24"}
+				<ExperienceCard
+					name={"Software Engineer Lead - Africa Renewal University"}
+					years={"2023-Present"}
 					position="Programming Lead"
 				>
-					As the Programming Lead for the New West Charter FRC team in FIRST
-					Robotics, I led a team of developers in designing and implementing software
-					for our competition robot. Our work involved programming all robotic
-					systems using Java, deploying code to the NI roboRIO, and ensuring seamless
-					integration of hardware and software components. Through this role, I
-					gained experience in team leadership, real-time system development, and
-					problem-solving in a high-stakes, competitive environment.
-				</ExperienceCard> */}
+					As a software developer on the Africa Renewal University school management
+					system redesign, I led the end-to-end modernization of a production system
+					serving over 2,000 students across seven departments. The project involved
+					rebuilding the backend in Java using Spring Boot and PostgreSQL and
+					developing a React-based front end to improve scalability, reliability, and
+					long-term maintainability. I worked closely with departmental staff to
+					gather requirements, translate operational needs into technical solutions,
+					and deliver features that streamlined academic and administrative
+					workflows. Through this role, I gained experience in full-stack system
+					design, stakeholder collaboration, and building enterprise-grade software
+					for real-world institutional use.
+				</ExperienceCard>
 				<ExperienceCard
 					name={"Research Assistant - Global Fragmentation Project, USC"}
 					years={"2025-Present"}
@@ -60,11 +64,15 @@ export default function Experience() {
 					position="Project Lead/Developer"
 				>
 					Designed and developed a dynamic website for the nonprofit Your Future Is
-					Our Business, providing nearly 38,000 K-12 students in the Santa Cruz area
+					Our Business, providing nearly 38,000 K–12 students in the Santa Cruz area
 					with a platform for career exploration. Built with React, Firebase, and
 					Tailwind, the site enables students to discover career pathways, access
 					valuable resources, and connect with opportunities that support their
-					professional growth and future success.
+					professional growth and future success. In addition, I served as the
+					project lead for a collaborative initiative with United Way, where I guided
+					a cross-functional team in developing a 211 application that allows Santa
+					Cruz County residents to easily locate nearby social and community
+					services.
 				</ExperienceCard>
 				<ExperienceCard
 					name={"Formula Slug"}
@@ -83,7 +91,7 @@ export default function Experience() {
 					races, optimizing both vehicle tuning and race strategies in a highly
 					competitive environment.
 				</ExperienceCard>
-				<ExperienceCard
+				{/* <ExperienceCard
 					name={"Joppa Games"}
 					years={"2020-2023"}
 					position="Founder/Lead Developer"
@@ -94,7 +102,7 @@ export default function Experience() {
 					and training in scripting, networking, game design, and 3D modeling,
 					fostering a collaborative environment that promoted both individual and
 					team growth.
-				</ExperienceCard>
+				</ExperienceCard> */}
 			</div>
 		</div>
 	);

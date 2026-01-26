@@ -26,7 +26,7 @@ export default function Experience() {
 			<div className="grid text-roboto w-full grid-cols-1 md:grid-cols-2 gap-4 p-5">
 				<ExperienceCard
 					name={"Software Engineer Lead - Africa Renewal University"}
-					years={"2023-Present"}
+					years={"2025-Present"}
 					position="Programming Lead"
 				>
 					As a software developer on the Africa Renewal University school management

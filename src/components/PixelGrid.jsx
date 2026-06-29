@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 const CELL = 20; // px per grid cell
 const DECAY = 0.92; // per-frame alpha multiplier (lower = faster fade)
 const INDIGO = "129,140,248"; // indigo-400
-const CHARS = "01<>/{}[]*+#"; // pool of characters drawn at random
+const CHARS = "$01<>/{}[]*+#"; // pool of characters drawn at random
 
 export default function PixelGrid() {
 	const canvasRef = useRef(null);

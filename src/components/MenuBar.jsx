@@ -1,13 +1,14 @@
 function MenuItem({ elementId, children }) {
 	function scrollTo() {
 		let element = document.getElementById(elementId);
-		console.log(element);
-		element.scrollIntoView({ behavior: "smooth", block: "start" });
+		if (element) {
+			element.scrollIntoView({ behavior: "smooth", block: "start" });
+		}
 	}
 	return (
 		<button
 			onClick={scrollTo}
-			className="m-0 p-2 px-3 md:px-10 text-xl text-slate-100 hover:text-2xl hover:text-indigo-900 duration-200 font-roboto blur-none"
+			className="m-0 px-4 md:px-6 py-1.5 rounded-full text-lg text-slate-100 hover:text-indigo-300 duration-200 font-sans"
 		>
 			{children}
 		</button>
@@ -17,13 +18,11 @@ function MenuItem({ elementId, children }) {
 function MenuBar() {
 	return (
 		<>
-			<div className="sticky top-0 z-40 h-14 backdrop-blur-sm">
-				<div className="flex justify-evenly">
-					<div className="flex justify-evenly">
-						<MenuItem elementId={"About"}>About</MenuItem>
-						<MenuItem elementId={"Experience"}>Experience</MenuItem>
-						<MenuItem elementId={"Projects"}>Projects</MenuItem>
-					</div>
+			<div className="fixed inset-x-0 top-4 z-40 flex justify-center">
+				<div className="flex items-center rounded-full border border-white/10 bg-white/5 px-2 py-1 backdrop-blur-md shadow-lg">
+					<MenuItem elementId="Experience">Experience</MenuItem>
+					<MenuItem elementId="Projects">Projects</MenuItem>
+					<MenuItem elementId="Links">Links</MenuItem>
 				</div>
 			</div>
 		</>

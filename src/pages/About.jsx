@@ -1,43 +1,32 @@
-import Headshot from "../assets/images/Daniel-headshot.jpg";
-import Links from "../components/Links";
+import WordSphere from "../components/WordSphere";
 
 function About() {
 	return (
-		<div className="pt-10 relative z-20">
-			<div className="flex-col-reverse md:flex-row md:flex">
-				<div className="flex-[1.2] mr-0">
-					<div className="flex-col justify-center">
-						<div className="py-11 font-roboto">
-							<h1 className="left-0 px-2 md:px-[5rem] py-2 w-1/2 text-7xl md:text-8xl text-neutral-50 tracking-normal hover:tracking-wide duration-300">
-								<b>Daniel Gonzalez</b>
-							</h1>
-							<Links />
-							<h2 className="left-0 px-2 md:px-[5.25rem] md:py-2 text-2xl text-neutral-100">
-								Software Developer
-							</h2>
-						</div>
-					</div>
-					<div>
-						<p className="m-3 text-lg md:text-xl text-neutral-400 px-1 md:px-[4.5rem]">
-							Hi! I&apos;m Daniel Gonzalez, a dual Economics and Computer Science major
-							who&apos;s been passionate about coding since age 7. My journey started
-							with a Khan Academy JavaScript course, and since then I&apos;ve explored
-							everything from game development to machine learning to web apps. I love
-							using computer science as a lens to understand and apply economic
-							insights, building technology-driven solutions that make a real-world
-							impact.
-						</p>
-					</div>
-				</div>
-				<div className="flex-1 px-2 md:p-8 min-w-[200px]">
-					<img
-						className="rounded-sm overflow-hidden"
-						src={Headshot}
-						alt="Headshot"
-					/>
+		<section className="relative w-full min-h-[calc(100vh-4rem)] flex flex-col justify-between py-12 px-6 md:px-20 overflow-hidden z-20">
+			{/* Left/Middle Content Area */}
+			<div className="flex-grow flex items-center">
+				<div className="w-full max-w-4xl z-10">
+					<h1 className="font-sans text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-neutral-100 tracking-tight select-none z-20">
+						DanielGonzalez.dev
+						<span className="inline-block w-[12px] sm:w-[18px] md:w-[24px] h-[0.8em] bg-neutral-100 ml-2 align-middle animate-blink" />
+					</h1>
 				</div>
 			</div>
-		</div>
+
+			{/* 3D Word Sphere Container on the Right */}
+			<div className="absolute right-0 md:right-[-5vw] top-1/2 -translate-y-1/2 translate-x-1/3 md:translate-x-0 w-[280px] h-[280px] sm:w-[450px] sm:h-[450px] md:w-[60vw] md:h-[60vw] z-0 flex items-center justify-center bg-[radial-gradient(circle_at_bottom_right,rgba(56,189,248,0.25),transparent_60%)]">
+				<div className="relative w-full h-full flex items-center justify-center">
+					<WordSphere />
+				</div>
+			</div>
+
+			{/* Bottom Slogan */}
+			<div className="w-full text-center z-10 mt-8">
+				<h2 className="font-sans text-lg sm:text-xl md:text-2xl text-neutral-300 tracking-wide select-none">
+					Developing solutions to real world issues
+				</h2>
+			</div>
+		</section>
 	);
 }
 

@@ -1,43 +1,50 @@
+import { motion } from "motion/react";
 import Headshot from "../assets/images/Daniel-headshot.jpg";
 import Links from "../components/Links";
+import { fadeUp, fromRight, stagger, reveal } from "../lib/motion";
 
 function About() {
 	return (
-		<div className="pt-10 relative z-20">
-			<div className="flex-col-reverse md:flex-row md:flex">
-				<div className="flex-[1.2] mr-0">
-					<div className="flex-col justify-center">
-						<div className="py-11 font-roboto">
-							<h1 className="left-0 px-2 md:px-[5rem] py-2 w-1/2 text-7xl md:text-8xl text-neutral-50 tracking-normal hover:tracking-wide duration-300">
-								<b>Daniel Gonzalez</b>
-							</h1>
-							<Links />
-							<h2 className="left-0 px-2 md:px-[5.25rem] md:py-2 text-2xl text-neutral-100">
-								Software Developer
-							</h2>
-						</div>
-					</div>
-					<div>
-						<p className="m-3 text-lg md:text-xl text-neutral-400 px-1 md:px-[4.5rem]">
-							Hi! I&apos;m Daniel Gonzalez, a dual Economics and Computer Science major
-							who&apos;s been passionate about coding since age 7. My journey started
-							with a Khan Academy JavaScript course, and since then I&apos;ve explored
-							everything from game development to machine learning to web apps. I love
-							using computer science as a lens to understand and apply economic
-							insights, building technology-driven solutions that make a real-world
-							impact.
-						</p>
-					</div>
+		<motion.section
+			variants={stagger}
+			{...reveal}
+			className="relative z-20 py-16 font-sans"
+		>
+			<motion.h1 variants={fadeUp} className="font-bold text-neutral-200 text-3xl p-5">
+				About
+			</motion.h1>
+			<div className="grid md:grid-cols-[1fr_auto] gap-10 items-center px-6 md:px-20">
+				<div className="max-w-3xl">
+					<motion.p
+						variants={fadeUp}
+						className="text-lg md:text-xl text-neutral-300 leading-relaxed"
+					>
+						Hi there, I&apos;m Daniel! Currently, I am a third-year Mathematics of
+						Computation and Economics student at UCLA. My passion lies in solving
+						problems using tools from computer science, economics, and math. What
+						drives me is creating solutions that help real people.
+					</motion.p>
+					<motion.p
+						variants={fadeUp}
+						className="text-lg md:text-xl text-neutral-300 leading-relaxed mt-4"
+					>
+						Currently, my interests are in machine learning, developmental
+						economics, and AI development. I&apos;m also a huge nvim fan :)
+					</motion.p>
 				</div>
-				<div className="flex-1 px-2 md:p-8 min-w-[200px]">
+				<motion.div
+					variants={fromRight}
+					className="flex flex-col items-center gap-4 justify-self-center"
+				>
 					<img
-						className="rounded-sm overflow-hidden"
 						src={Headshot}
-						alt="Headshot"
+						alt="Daniel Gonzalez"
+						className="w-48 md:w-64 rounded-xl border border-white/10 shadow-lg"
 					/>
-				</div>
+					<Links />
+				</motion.div>
 			</div>
-		</div>
+		</motion.section>
 	);
 }
 

@@ -1,0 +1,30 @@
+[
+	{
+		"name": "Pantry Pal: ACM Hacks Best Impact Winner",
+		"link": "https://github.com/dgonz10152/slug-aid",
+		"tags": ["React", "Firebase", "Google Maps-Api", "Google Cloud-Vision", "Next.js", "Material UI"],
+		"image": "pantryPal.png",
+		"description": "At UCSC, there are numerous on-campus basic needs facilities, but many remain underutilized due to confusion about what they offer and where they're located. This app is here to change that. It provides a platform for these facilities to post their available products, along with an interactive map to help users easily find them. Additionally, the app leverages AI-powered image recognition to automatically identify and catalog the inventory in these facilities, making it easier for staff to itemize their offerings and for students to access up-to-date information about available resources."
+	},
+	{
+		"name": "Fire Oracle: UN Reboot the Earth Challenge Runner Up",
+		"link": "https://github.com/dgonz10152/reboot-the-earth",
+		"tags": ["React", "Next.js", "Flask", "Scikit-Learn"],
+		"image": "fireOracle.png",
+		"description": "Fire Oracle is a decision-support web application designed to help firefighters prioritize geographic areas for prescribed burns using data-driven risk and feasibility analysis. The platform leverages a custom-trained AI model built on historical wildfire data and integrates live weather and environmental inputs to generate dynamic fire risk and burn feasibility scores. These insights are presented through an interactive, map-based interface built in React, with real-time data served from a Flask backend, enabling clear visualization of prioritization results and supporting informed, operational decision-making in wildfire management."
+	},
+	{
+		"name": "Formula Slug Live Telemetry Visualization",
+		"link": "https://github.com/formulaslug/telemetry-vis-software",
+		"tags": ["React", "Python", "TypeScript", "Next.js", "Apache Arrow"],
+		"image": "formulaSlug.png",
+		"description": "Modern motorsport demands real-time data analysis to optimize performance and strategy. This project delivers a seamless data streaming solution for Formula Slug's FS-3 car, enabling instant telemetry visualization. By leveraging WebSocket and Apache Arrow, it ensures efficient, low-latency data transmission. The frontend, built with React and Three.js, provides an interactive and dynamic dashboard for real-time performance monitoring. With the over 100 Formula Slug team members, this platform empowers engineers, drivers, and analysts to make data-driven decisions faster, enhancing both vehicle performance and race strategy."
+	},
+	{
+		"name": "Jordan",
+		"link": "https://jordanhired.com",
+		"tags": ["React", "TypeScript", "Next.js", "Vapi", "Supabase", "SQL"],
+		"image": "jordan.png",
+		"description": "Many employees struggle to find the right marketing company due to a lack of personalized guidance. This website aims to change that. It provides a platform where users can interview with an AI that evaluates their skills, experience, and career goals. Based on the interview, the AI intelligently matches them with marketing companies that align with their strengths and aspirations. Users can access detailed company profiles, explore potential career paths, and receive tailored recommendations. Built with React, TypeScript, and Next.js, and powered by Vapi for AI-driven conversations, the platform utilizes Supabase and SQL to ensure secure data management and a seamless user experience."
+	}
+]

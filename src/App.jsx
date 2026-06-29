@@ -1,25 +1,33 @@
 import MenuBar from "./components/MenuBar";
+import Hero from "./pages/Hero";
 import About from "./pages/About";
 import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
-import Spinny from "./components/Spinny";
+import PixelGrid from "./components/PixelGrid";
+import { MotionConfig } from "motion/react";
 
 function App() {
 	return (
-		<>
-			<Spinny />
+		<MotionConfig reducedMotion="user">
+			<PixelGrid />
 
-			<div className="relative bg-slate-950">
-				<div id="About" />
+			<div className="relative overflow-x-hidden">
+				<div id="Hero" />
 				<MenuBar />
+				<Hero />
+				<div id="About" />
 				<About />
-				<hr className="p-0 m-10 w-[95vw] h-1 mx-auto my-20 border-0 rounded bg-neutral-700" />
 				<div id="Experience" />
 				<Experience />
 				<div id="Projects" />
 				<Projects />
+				<footer className="py-20 flex flex-col items-center justify-center border-t border-slate-900 bg-slate-950/80 relative z-20">
+					<p className="text-sm text-neutral-500 font-sans select-none">
+						&copy; {new Date().getFullYear()} Daniel Gonzalez. All rights reserved.
+					</p>
+				</footer>
 			</div>
-		</>
+		</MotionConfig>
 	);
 }
 

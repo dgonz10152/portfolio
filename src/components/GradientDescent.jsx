@@ -16,12 +16,22 @@ const GROUND_Y = -0.5; // shift the whole bowl down so it frames better
 const INDIGO = "#818cf8";
 
 // Gaussian wells carve several local minima into a shallow bowl.
-const WELLS = [
-	{ x: -2.0, z: -1.4, d: 1.9, s: 1.3 },
-	{ x: 2.1, z: 1.3, d: 2.6, s: 1.6 }, // deepest (global)
-	{ x: -1.4, z: 2.1, d: 1.5, s: 1.1 },
-	{ x: 1.6, z: -2.1, d: 1.8, s: 1.3 },
-];
+// Randomized once per page load so the landscape differs each visit.
+const rand = (min, max) => min + Math.random() * (max - min);
+const makeWells = () => {
+	const count = 3 + Math.floor(Math.random() * 3); // 3-5 wells
+	return Array.from({ length: count }, () => {
+		const angle = Math.random() * Math.PI * 2;
+		const radius = rand(1.2, R * 0.6);
+		return {
+			x: Math.cos(angle) * radius,
+			z: Math.sin(angle) * radius,
+			d: rand(1.5, 2), // depth
+			s: rand(1.1, 2), // spread
+		};
+	});
+};
+const WELLS = makeWells();
 
 const f = (x, z) => {
 	let y = BOWL * (x * x + z * z);

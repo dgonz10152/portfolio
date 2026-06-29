@@ -4,10 +4,11 @@ import About from "./pages/About";
 import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
 import PixelGrid from "./components/PixelGrid";
+import { MotionConfig } from "motion/react";
 
 function App() {
 	return (
-		<>
+		<MotionConfig reducedMotion="user">
 			<PixelGrid />
 
 			<div className="relative overflow-x-hidden">
@@ -26,7 +27,7 @@ function App() {
 					</p>
 				</footer>
 			</div>
-		</>
+		</MotionConfig>
 	);
 }
 

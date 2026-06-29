@@ -1,4 +1,6 @@
+import { motion } from "motion/react";
 import projects from "../data/projects.json";
+import { fadeUp, fromLeft, fromRight, stagger, reveal } from "../lib/motion";
 
 // Resolve a JSON image filename to its bundled/hashed URL
 const images = import.meta.glob("../assets/images/*.{png,jpg}", {
@@ -11,9 +13,16 @@ const imgFor = (file) =>
 function ProjectRow({ name, link, tags, description, image }) {
 	const imageUrl = image && imgFor(image);
 	return (
-		<div className="grid md:grid-cols-2 gap-10 items-center">
+		<motion.div
+			variants={stagger}
+			{...reveal}
+			className="grid md:grid-cols-2 gap-10 items-center"
+		>
 			{/* text, plain on the dark background */}
-			<div className={`px-6 md:pl-20 ${imageUrl ? "md:pr-0" : "md:pr-20"}`}>
+			<motion.div
+				variants={fromLeft}
+				className={`px-6 md:pl-20 ${imageUrl ? "md:pr-0" : "md:pr-20"}`}
+			>
 				<h3 className="text-2xl md:text-3xl font-bold text-neutral-100">{name}</h3>
 				<ul className="flex flex-wrap mt-3">
 					{tags.map((tag) => (
@@ -37,26 +46,34 @@ function ProjectRow({ name, link, tags, description, image }) {
 						Private
 					</button>
 				)}
-			</div>
+			</motion.div>
 
-			{/* framed screenshot, widened + nudged so it bleeds off the right edge */}
+			{/* framed screenshot, widened + nudged so it bleeds off the right edge.
+			    Motion (opacity + x) lives on the outer wrapper; the popout translate
+			    stays on the inner div so the two transforms don't fight. */}
 			{imageUrl && (
-				<div className="relative px-6 md:px-0 md:w-[125%] md:translate-x-8">
-					<div className="rounded-xl border border-white/10 shadow-2xl overflow-hidden bg-white/5 backdrop-blur-md">
-						<img src={imageUrl} alt={name} className="w-full block" />
+				<motion.div variants={fromRight}>
+					<div className="relative px-6 md:px-0 md:w-[125%] md:translate-x-8">
+						<div className="rounded-xl border border-white/10 shadow-2xl overflow-hidden bg-white/5 backdrop-blur-md">
+							<img src={imageUrl} alt={name} className="w-full block" />
+						</div>
 					</div>
-				</div>
+				</motion.div>
 			)}
-		</div>
+		</motion.div>
 	);
 }
 
 function Projects() {
 	return (
 		<section className="relative z-20 py-16 overflow-hidden font-sans">
-			<b>
-				<h1 className="text-neutral-200 text-3xl p-5">Projects</h1>
-			</b>
+			<motion.h1
+				variants={fadeUp}
+				{...reveal}
+				className="font-bold text-neutral-200 text-3xl p-5"
+			>
+				Projects
+			</motion.h1>
 			<div className="flex flex-col gap-24 md:gap-32">
 				{projects.map((item) => (
 					<ProjectRow key={item.name} {...item} />

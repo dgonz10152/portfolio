@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { motion } from "motion/react";
 
 // Fixed full-viewport grid: ascii chars light up indigo where the cursor hovers, then fade out.
 // ponytail: rAF decay loop only runs while any cell is lit; idle = no work.
@@ -74,8 +75,11 @@ export default function PixelGrid() {
 	}, []);
 
 	return (
-		<canvas
+		<motion.canvas
 			ref={canvasRef}
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 1 }}
 			className="fixed inset-0 -z-10 h-full w-full bg-slate-950"
 		/>
 	);

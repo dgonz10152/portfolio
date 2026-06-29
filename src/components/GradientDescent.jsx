@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property -- React Three Fiber intrinsics (geometry, args, position, etc.) */
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";

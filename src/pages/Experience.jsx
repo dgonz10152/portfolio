@@ -1,5 +1,7 @@
+import { motion } from "motion/react";
 import { Timeline, TimelineItem } from "../components/Timeline";
 import experience from "../data/experience.json";
+import { fadeUp, stagger, reveal } from "../lib/motion";
 
 // Resolve a JSON logo filename to its bundled/hashed URL (drop logos in src/assets/images)
 const images = import.meta.glob("../assets/images/*.{png,jpg,svg}", {
@@ -40,19 +42,21 @@ function ExperienceCard({ name, years, position, description, logo }) {
 
 export default function Experience() {
 	return (
-		<div className="py-10 relative z-20">
-			<b>
-				<h1 className="text-neutral-200 text-3xl p-5">Experience</h1>
-			</b>
+		<motion.div variants={stagger} {...reveal} className="py-10 relative z-20">
+			<motion.h1 variants={fadeUp} className="font-bold text-neutral-200 text-3xl p-5">
+				Experience
+			</motion.h1>
 			<div className="font-sans p-5">
 				<Timeline>
 					{experience.map((item) => (
 						<TimelineItem key={item.name}>
-							<ExperienceCard {...item} />
+							<motion.div variants={fadeUp}>
+								<ExperienceCard {...item} />
+							</motion.div>
 						</TimelineItem>
 					))}
 				</Timeline>
 			</div>
-		</div>
+		</motion.div>
 	);
 }

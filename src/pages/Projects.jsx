@@ -27,7 +27,7 @@ function ProjectCard({ name, link, tags, children, imageUrl }) {
 		<div
 			onMouseMove={handleMouseMove}
 			onMouseLeave={() => setMousePosition({ x: 0, y: 0 })}
-			className="rounded-md p-3 bg-neutral-900/20 backdrop-blur-md m-4 opacity-30 hover:opacity-100 duration-150 md:w-[45%] flex-grow flex flex-col justify-between shadow-lg"
+			className="rounded-md p-3 border border-white/10 bg-white/5 backdrop-blur-md m-4 opacity-30 hover:opacity-100 duration-150 md:w-[45%] flex-grow flex flex-col justify-between shadow-lg"
 			style={{
 				transform: `perspective(1000px) rotateY(${
 					-mousePosition.x * multiplier
@@ -74,7 +74,7 @@ function Projects() {
 			<b>
 				<h1 className="text-neutral-200 text-3xl p-5">Projects</h1>
 			</b>
-			<div className="md:flex flex-wrap font-roboto">
+			<div className="md:flex flex-wrap font-sans">
 				<ProjectCard
 					name={"Pantry Pal: ACM Hacks Best Impact Winner"}
 					link={"https://github.com/dgonz10152/slug-aid"}

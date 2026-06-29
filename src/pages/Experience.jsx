@@ -1,6 +1,6 @@
 function ExperienceCard({ name, children, years, position = "Developer" }) {
 	return (
-		<div className="rounded-md p-10 bg-neutral-900/20 hover:bg-neutral-700/20 backdrop-blur-md duration-300 transition-[background-color] ease-[cubic-bezier(0.77,0,0.175,1)]">
+		<div className="rounded-md p-10 border border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-md shadow-lg duration-300 transition-[background-color] ease-[cubic-bezier(0.77,0,0.175,1)]">
 			<b>
 				<div className="flex justify-between">
 					<h1 className="text-lg md:text-xl text-neutral-200 m-1 w-1/2">{name}</h1>
@@ -23,7 +23,7 @@ export default function Experience() {
 			<b>
 				<h1 className="text-neutral-200 text-3xl p-5">Experience</h1>
 			</b>
-			<div className="grid text-roboto w-full grid-cols-1 md:grid-cols-2 gap-4 p-5">
+			<div className="grid font-sans w-full grid-cols-1 md:grid-cols-2 gap-4 p-5">
 				<ExperienceCard
 					name={"Software Engineer Lead - Africa Renewal University"}
 					years={"2023-Present"}

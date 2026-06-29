@@ -20,12 +20,6 @@ function About() {
 				</div>
 			</div>
 
-			{/* Bottom Slogan */}
-			<div className="w-full text-center z-10 mt-8">
-				<h2 className="font-sans text-lg sm:text-xl md:text-2xl text-neutral-300 tracking-wide select-none">
-					Developing solutions to real world issues
-				</h2>
-			</div>
 		</section>
 	);
 }

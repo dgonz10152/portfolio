@@ -4,9 +4,10 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				roboto: ["roboto", "sans-serif"],
-				"roboto-bold": ["roboto-bold"],
-				"noto-serif": ["noto-serif", "serif"],
+				sans: ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+				roboto: ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+				"roboto-bold": ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+				"noto-serif": ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
 			},
 		},
 	},

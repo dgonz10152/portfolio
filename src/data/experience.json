@@ -1,24 +1,28 @@
 [
 	{
 		"name": "Software Engineer Lead - Africa Renewal University",
+		"logo": "afru.jpg",
 		"position": "Programming Lead",
 		"years": "2023-Present",
 		"description": "As a software developer on the Africa Renewal University school management system redesign, I led the end-to-end modernization of a production system serving over 2,000 students across seven departments. The project involved rebuilding the backend in Java using Spring Boot and PostgreSQL and developing a React-based front end to improve scalability, reliability, and long-term maintainability. I worked closely with departmental staff to gather requirements, translate operational needs into technical solutions, and deliver features that streamlined academic and administrative workflows. Through this role, I gained experience in full-stack system design, stakeholder collaboration, and building enterprise-grade software for real-world institutional use."
 	},
 	{
 		"name": "Research Assistant - Global Fragmentation Project, USC",
+		"logo": "usc.jpg",
 		"position": "Research Assistant",
 		"years": "2025-Present",
 		"description": "As a Research Assistant to Professor David Schonholzer at USC, I contributed to a project on global fragmentation, studying how administrative boundaries within urban areas affect population outcomes. I developed and refined a city clustering algorithm to delineate urban regions, which were then compared against a range of geospatial and statistical datasets, including GDP, quality of life indices, and demographic distributions. This work involved integrating spatial analysis with data-driven research methods, providing insights into the socio-economic impacts of urban fragmentation and supporting the project's broader goal of understanding the relationship between city structure and human well-being."
 	},
 	{
 		"name": "Blueprint",
+		"logo": "blueprint.jpg",
 		"position": "Project Lead/Developer",
 		"years": "2024-Present",
 		"description": "Designed and developed a dynamic website for the nonprofit Your Future Is Our Business, providing nearly 38,000 K–12 students in the Santa Cruz area with a platform for career exploration. Built with React, Firebase, and Tailwind, the site enables students to discover career pathways, access valuable resources, and connect with opportunities that support their professional growth and future success. In addition, I served as the project lead for a collaborative initiative with United Way, where I guided a cross-functional team in developing a 211 application that allows Santa Cruz County residents to easily locate nearby social and community services."
 	},
 	{
 		"name": "Formula Slug",
+		"logo": "formula-slug.jpg",
 		"position": "Telemetry Co-Lead/Developer",
 		"years": "2024-2025",
 		"description": "Engineered a high-performance data streaming solution as part of the FSAE (Formula SAE) competition, enabling real-time telemetry analysis for a Formula-style car. Utilizing WebSocket and Apache Arrow for efficient, low-latency data transmission, the solution enhanced performance monitoring and decision-making. As co-lead of the telemetry team, I managed a group of 30 members, overseeing project timelines, onboarding new team members, and coordinating development tasks. By integrating React and Three.js, my team and I developed advanced visualization tools that allowed over 100 team members to track key metrics and analyze performance during testing and races, optimizing both vehicle tuning and race strategies in a highly competitive environment."

@@ -29,7 +29,7 @@ const highlightKeywords = [
 	"impact"
 ];
 
-function WordSphere() {
+function WordSphere({ diameter = 0 }) {
 	const containerRef = useRef(null);
 	const [radius, setRadius] = useState(220);
 	const [isDragging, setIsDragging] = useState(false);
@@ -46,6 +46,12 @@ function WordSphere() {
 	};
 
 	useEffect(() => {
+		// When a target diameter is supplied (e.g. sized to the hero title), use it directly
+		if (diameter > 0) {
+			setRadius(Math.max(120, diameter / 2));
+			return;
+		}
+
 		const handleResize = () => {
 			if (containerRef.current && containerRef.current.parentElement) {
 				const width = containerRef.current.parentElement.clientWidth;
@@ -58,7 +64,7 @@ function WordSphere() {
 		handleResize();
 		window.addEventListener("resize", handleResize);
 		return () => window.removeEventListener("resize", handleResize);
-	}, []);
+	}, [diameter]);
 
 	// Distribute words uniformly over a 3D sphere when radius changes
 	useEffect(() => {

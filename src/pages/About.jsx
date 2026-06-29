@@ -1,22 +1,36 @@
+import { useEffect, useRef, useState } from "react";
 import WordSphere from "../components/WordSphere";
 
 function About() {
+	const titleRef = useRef(null);
+	const [titleWidth, setTitleWidth] = useState(0);
+
+	// Track the rendered width of the title text so the sphere can size relative to it
+	useEffect(() => {
+		if (!titleRef.current) return;
+		const observer = new ResizeObserver(([entry]) => {
+			setTitleWidth(entry.contentRect.width);
+		});
+		observer.observe(titleRef.current);
+		return () => observer.disconnect();
+	}, []);
+
 	return (
 		<section className="relative w-full min-h-[calc(100vh-4rem)] flex flex-col justify-between py-12 px-6 md:px-20 overflow-hidden z-20">
 			{/* Left/Middle Content Area */}
-			<div className="flex-grow flex items-center">
-				<div className="w-full max-w-4xl z-10">
+			<div className="flex-grow flex items-center justify-center">
+				<div className="w-full max-w-4xl z-10 text-center">
 					<h1 className="font-sans text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-neutral-100 tracking-tight select-none z-20">
-						DanielGonzalez.dev
+						<span ref={titleRef} className="inline-block">DanielGonzalez.dev</span>
 						<span className="inline-block w-[12px] sm:w-[18px] md:w-[24px] h-[0.8em] bg-neutral-100 ml-2 align-middle animate-blink" />
 					</h1>
 				</div>
 			</div>
 
 			{/* 3D Word Sphere Container on the Right */}
-			<div className="absolute right-0 md:right-[-5vw] top-1/2 -translate-y-1/2 translate-x-1/3 md:translate-x-0 w-[280px] h-[280px] sm:w-[450px] sm:h-[450px] md:w-[60vw] md:h-[60vw] z-0 flex items-center justify-center bg-[radial-gradient(circle_at_bottom_right,rgba(56,189,248,0.25),transparent_60%)]">
-				<div className="relative w-full h-full flex items-center justify-center">
-					<WordSphere />
+			<div className="absolute inset-x-0 bottom-0 top-24 z-0 flex items-center justify-center bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.12),transparent_60%)]">
+				<div className="relative w-full h-[125%] flex items-center justify-center">
+					<WordSphere diameter={titleWidth * 1.2} />
 				</div>
 			</div>
 

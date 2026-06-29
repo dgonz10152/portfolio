@@ -2,14 +2,12 @@ import MenuBar from "./components/MenuBar";
 import About from "./pages/About";
 import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
-import Spinny from "./components/Spinny";
 import Links from "./components/Links";
 import PixelGrid from "./components/PixelGrid";
 
 function App() {
 	return (
 		<>
-			<Spinny />
 			<PixelGrid />
 
 			<div className="relative overflow-x-hidden">

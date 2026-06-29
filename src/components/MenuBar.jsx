@@ -1,3 +1,6 @@
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 function MenuItem({ elementId, children }) {
 	function scrollTo() {
 		let element = document.getElementById(elementId);
@@ -20,9 +23,12 @@ function MenuBar() {
 		<>
 			<div className="fixed inset-x-0 top-4 z-40 flex justify-center">
 				<div className="flex items-center rounded-full border border-white/10 bg-white/5 px-2 py-1 backdrop-blur-md shadow-lg">
+					<MenuItem elementId="Hero">
+						<FontAwesomeIcon icon={faHouse} aria-label="Home" />
+					</MenuItem>
+					<MenuItem elementId="About">About</MenuItem>
 					<MenuItem elementId="Experience">Experience</MenuItem>
 					<MenuItem elementId="Projects">Projects</MenuItem>
-					<MenuItem elementId="Links">Links</MenuItem>
 				</div>
 			</div>
 		</>

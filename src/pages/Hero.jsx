@@ -1,6 +1,6 @@
 import GradientDescent from "../components/GradientDescent";
 
-function About() {
+function Hero() {
 	return (
 		<section className="relative w-full min-h-[calc(100vh-4rem)] flex flex-col justify-between py-12 px-6 md:px-20 overflow-hidden z-20">
 			{/* Left/Middle Content Area */}
@@ -13,7 +13,7 @@ function About() {
 				</div>
 			</div>
 
-			{/* 3D Word Sphere Container on the Right */}
+			{/* Background gradient-descent visualization */}
 			<div className="absolute inset-x-0 bottom-0 top-24 z-0 flex items-center justify-center bg-[radial-gradient(circle_closest-side_at_center,rgba(56,189,248,0.14),transparent_70%)]">
 				<div className="relative w-full h-full flex items-center justify-center">
 					<GradientDescent />
@@ -24,4 +24,4 @@ function About() {
 	);
 }
 
-export default About;
+export default Hero;

@@ -1,13 +1,21 @@
 [
+    {
+        "name": "TODD",
+        "logo": "todd.jpg",
+        "position": "Software Engineering Intern",
+        "years": "2026-Present",
+        "description": "As a software engineering intern at TODD, I built analytics systems that turned raw product usage into clear, actionable insights for the team, helping guide data-driven decisions across the organization. I also developed comprehensive end-to-end testing that exercised the application the way real users would, catching regressions early and strengthening the overall reliability and confidence in each release."
+    },
+    
 	{
-		"name": "Software Engineer Lead - Africa Renewal University",
+		"name": "Africa Renewal University",
 		"logo": "afru.jpg",
 		"position": "Programming Lead",
-		"years": "2023-Present",
+		"years": "2025-Present",
 		"description": "As a software developer on the Africa Renewal University school management system redesign, I led the end-to-end modernization of a production system serving over 2,000 students across seven departments. The project involved rebuilding the backend in Java using Spring Boot and PostgreSQL and developing a React-based front end to improve scalability, reliability, and long-term maintainability. I worked closely with departmental staff to gather requirements, translate operational needs into technical solutions, and deliver features that streamlined academic and administrative workflows. Through this role, I gained experience in full-stack system design, stakeholder collaboration, and building enterprise-grade software for real-world institutional use."
 	},
 	{
-		"name": "Research Assistant - Global Fragmentation Project, USC",
+		"name": "Global Fragmentation Project, USC",
 		"logo": "usc.jpg",
 		"position": "Research Assistant",
 		"years": "2025-Present",

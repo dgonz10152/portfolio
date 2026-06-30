@@ -25,8 +25,8 @@ function ExperienceCard({ name, years, position, description, logo }) {
 				)}
 				<b className="flex-1">
 					<div className="flex justify-between">
-						<h1 className="text-lg md:text-xl text-neutral-200 m-1">{name}</h1>
-						<h1 className="text-lg md:text-xl text-neutral-400 m-1">{position}</h1>
+						<h1 className="text-lg md:text-xl text-neutral-200 m-1">{position}</h1>
+						<h1 className="text-lg md:text-xl text-neutral-400 m-1">{name}</h1>
 					</div>
 
 					<h2 className="text-md md:text-lg text-neutral-400 m-1">{years}</h2>
